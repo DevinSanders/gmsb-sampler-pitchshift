@@ -1,0 +1,10 @@
+{
+  "publisher": "github.DevinSanders",
+  "id": "sampler.pitchshift",
+  "name": "Pitch Shift",
+  "version": "1.0.0",
+  "author": "Devin Sanders",
+  "description": "Shifts pitch ±24 semitones without changing playback speed. Granular overlap-add, ~50 ms latency.",
+  "entryDll": "PitchShiftPlugin.dll",
+  "isTheme": false
+}

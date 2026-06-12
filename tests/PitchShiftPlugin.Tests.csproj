@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- xunit.v3 ships its own test host, so the test assembly is an exe. -->
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\PitchShiftPlugin.csproj" />
+    <!-- The plugin strips the runtime asset of both SoundBoard.PluginApi and
+         NAudio.Core (the host supplies them from the default ALC at load
+         time). Tests run without that host, so the test project pulls its
+         own runtime copies. Versions match what the plugin compiles against. -->
+    <PackageReference Include="SoundBoard.PluginApi" Version="1.0.0-beta.1" />
+    <PackageReference Include="NAudio.Core" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" Version="3.2.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.6.0" />
+    <PackageReference Include="FluentAssertions" Version="7.2.2" />
+  </ItemGroup>
+
+</Project>
