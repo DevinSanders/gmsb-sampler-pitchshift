@@ -16,8 +16,7 @@ namespace PitchShiftTests;
 // which freezes the wet chain while bypassed — so on un-bypass you'll briefly
 // hear stale grains from when bypass engaged. The tests below exercise the
 // wet DSP directly via CreateEffect (bypassing the wrapper); the freeze is a
-// host-tier concern documented in the main app's CLAUDE.md §"FX Chain v1
-// limitations."
+// host-tier concern, not a plugin one.
 
 /// <summary>
 /// A deterministic <see cref="ISampleProvider"/>: every sample is produced
