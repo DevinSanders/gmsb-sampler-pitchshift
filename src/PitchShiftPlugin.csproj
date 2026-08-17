@@ -30,7 +30,7 @@
          ISampleProvider passed to CreateEffect would be a different
          CLR type from ours and the cast would fail. Override the
          transitive reference with an explicit one that skips runtime. -->
-    <PackageReference Include="NAudio.Core" Version="2.3.0" ExcludeAssets="runtime" />
+    <PackageReference Include="NAudio.Core" Version="3.0.0" ExcludeAssets="runtime" />
   </ItemGroup>
 
   <ItemGroup>
